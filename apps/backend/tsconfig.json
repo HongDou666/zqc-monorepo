@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"], // 显式加载 @types/node 的类型声明
+    "lib": ["ESNext"] // lib 决定 TypeScript 编译阶段可用的全局类型声明
+  },
+  "include": ["src"]
+}
