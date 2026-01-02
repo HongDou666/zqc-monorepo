@@ -1,6 +1,6 @@
 {
   "name": "@zqc-monorepo/components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -10,5 +10,23 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.15.0"
+  "packageManager": "pnpm@10.15.0",
+  "buildOptions": {
+    "name": "ZqcMonorepoComponents",
+    "formats": [
+      "esm",
+      "cjs",
+      "iife"
+    ]
+  },
+  "dependencies": {
+    "vue": "^3.5.26",
+    "@zqc-monorepo/utils": "workspace:*"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
