@@ -1,3 +1,4 @@
 zqc
 Vite
 Avenir
+lintstagedrc
