@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@zqc-monorepo/*": ["packages/*/src"]
+    },
     "module": "ESNext",
     "target": "ESNext",
     "types": [],

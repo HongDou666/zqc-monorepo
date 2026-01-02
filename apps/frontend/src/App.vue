@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
+import { ZqcArea } from "@zqc-monorepo/components";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import HelloWorld from "./components/HelloWorld.vue";
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <ZqcArea />
 </template>
 
 <style scoped>
