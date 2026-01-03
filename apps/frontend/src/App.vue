@@ -1,19 +1,27 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import { ZqcArea, ZqcRangePicker } from "@zqc-monorepo/components";
 import HelloWorld from "./components/HelloWorld.vue";
-import { ZqcArea } from "@zqc-monorepo/components";
+
+const defaultValue = ref(["2023-12-01", "2023-12-31"]);
+
+const handleChange = (val: [string, string]) => {
+  console.log("时间切换后：", val);
+};
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
+    <a href="#" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
-    <a href="https://vuejs.org/" target="_blank">
+    <a href="#" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
   <ZqcArea />
+  <ZqcRangePicker :default-value="defaultValue" :day-range="5" @change="handleChange" />
 </template>
 
 <style scoped>
