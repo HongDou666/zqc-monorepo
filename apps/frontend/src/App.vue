@@ -1,12 +1,28 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ZqcArea, ZqcRangePicker } from "@zqc-monorepo/components";
+import { ZqcArea, ZqcRangePicker, ZqcLoginForm } from "@zqc-monorepo/components";
 import HelloWorld from "./components/HelloWorld.vue";
+import { Space as ASpace } from "ant-design-vue";
+
+interface FormValueType {
+  username: string;
+  password: string;
+  remember: boolean;
+}
 
 const defaultValue = ref(["2023-12-01", "2023-12-31"]);
+const formValue = ref<FormValueType>({
+  username: "",
+  password: "",
+  remember: false
+});
 
 const handleChange = (val: [string, string]) => {
   console.log("时间切换后：", val);
+};
+
+const handleSubmit = (values: FormValueType) => {
+  console.log("父组件收到：", values);
 };
 </script>
 
@@ -20,8 +36,11 @@ const handleChange = (val: [string, string]) => {
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <ZqcArea />
-  <ZqcRangePicker :default-value="defaultValue" :day-range="5" @change="handleChange" />
+  <a-space direction="vertical">
+    <ZqcArea />
+    <ZqcRangePicker :default-value="defaultValue" :day-range="5" @change="handleChange" />
+    <ZqcLoginForm :default-values="formValue" @submit="handleSubmit" />
+  </a-space>
 </template>
 
 <style scoped>
