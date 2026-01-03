@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { ZqcArea, ZqcRangePicker, ZqcLoginForm } from "@zqc-monorepo/components";
-import HelloWorld from "./components/HelloWorld.vue";
 import { Space as ASpace } from "ant-design-vue";
+import HelloWorld from "./components/HelloWorld.vue";
 
 interface FormValueType {
   username: string;

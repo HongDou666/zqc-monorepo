@@ -2,11 +2,11 @@
   <div class="zqc-area">
     <div class="num">
       <span>number 1：</span>
-      <a-input-number v-model:value="n1" :min="1" :max="100" />
+      <a-input-number v-model:value="n1" data-testid="n1" :min="1" :max="100" />
     </div>
     <div class="num">
       <span>number 2：</span>
-      <a-input-number v-model:value="n2" :min="1" :max="100" />
+      <a-input-number v-model:value="n2" data-testid="n2" :min="1" :max="100" />
     </div>
     <div class="sum">
       <span data-testid="result">sum:{{ result }}</span>
