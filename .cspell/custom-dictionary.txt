@@ -2,3 +2,7 @@ zqc
 Vite
 Avenir
 lintstagedrc
+Iconfont
+alicdn
+anticon
+redianlianchan

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { ZqcArea, ZqcRangePicker, ZqcLoginForm } from "@zqc-monorepo/components";
+import { ZqcArea, ZqcRangePicker, ZqcLoginForm, ZqcIconFont } from "@zqc-monorepo/components";
 import { Space as ASpace } from "ant-design-vue";
 import HelloWorld from "./components/HelloWorld.vue";
 
@@ -40,6 +40,7 @@ const handleSubmit = (values: FormValueType) => {
     <ZqcArea />
     <ZqcRangePicker :default-value="defaultValue" :day-range="5" @change="handleChange" />
     <ZqcLoginForm :default-values="formValue" @submit="handleSubmit" />
+    <ZqcIconFont type="icon-redianlianchan" class="iconfont" />
   </a-space>
 </template>
 
@@ -55,5 +56,9 @@ const handleSubmit = (values: FormValueType) => {
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+:deep(.anticon.iconfont) {
+  font-size: 50px;
+  color: #48a7ff;
 }
 </style>

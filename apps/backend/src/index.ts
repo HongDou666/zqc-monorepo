@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 9000;
 
-const staticPath = path.resolve(__dirname, "../../frontend/dist");
+const staticPath = path.resolve(__dirname, "../../../dist");
 app.use(express.static(staticPath));
 
 // app.get("/", (req: Request, res: Response) => {
