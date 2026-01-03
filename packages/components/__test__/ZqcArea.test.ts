@@ -1,9 +1,9 @@
 import { render } from "vitest-browser-vue";
 import ZqcArea from "../src/ZqcArea/ZqcArea.vue";
 
-describe.skip("ZqcArea.vue", () => {
+describe("ZqcArea.vue", () => {
   test("mounted", async () => {
-    const screen = render(ZqcArea) as any;
+    const screen = render(ZqcArea) as Record<string, any>;
     screen.container.style.zoom = "2"; // 放大2倍
     const n1 = screen.getByTestId("n1");
     const n2 = screen.getByTestId("n2");
