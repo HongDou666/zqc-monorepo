@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
+import { Button as AButton } from "ant-design-vue";
+import { LinkedinOutlined } from "@ant-design/icons-vue";
 import { sum } from "@zqc-monorepo/utils";
 
 const n1 = ref(1);
@@ -20,6 +22,8 @@ const result = computed(() => sum(+n1.value, +n2.value));
     <div class="sum">
       <span data-testid="result">sum:{{ result }}</span>
     </div>
+    <a-button type="primary">Primary Button</a-button>
+    <LinkedinOutlined />
   </div>
 </template>
 

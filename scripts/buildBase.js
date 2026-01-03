@@ -60,7 +60,7 @@ async function getRollupConfig(root) {
   const rollupOptions = {
     input: entry, // 构建入口
     sourcemap: true, // 生成 sourcemap
-    external: ["vue"], // 外部依赖
+    external: ["vue", "ant-design-vue", "@ant-design/icons-vue", "dayjs"], // 外部依赖 排除打包
     plugins: [
       nodeResolve(), // 解析 node_modules
       commonjs(), // 支持 CommonJS
@@ -102,7 +102,10 @@ async function getRollupConfig(root) {
       file: path.resolve(dist, `index.${format}.js`), // 输出文件名
       sourcemap: true,
       globals: {
-        vue: "Vue" // 全局变量映射
+        vue: "Vue", // 全局变量映射
+        "ant-design-vue": "antd", // 全局变量映射
+        "@ant-design/icons-vue": "iconsVue", // 全局变量映射
+        dayjs: "dayjs" // 全局变量映射
       }
     };
     if (format === "iife") {
